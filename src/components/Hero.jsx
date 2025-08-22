@@ -1,18 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [
+    "/Frame3.png",
+    "/Frame11.png",
+    "/Frame7.png",
+    "/Frame15.png",
+    "/Frame2.png",
+    "/Frame9.png",
+    "/Frame14.png",
+    "/Frame5.png",
+    "/Frame18.png",
+    "/Frame1.png",
+    "/Frame13.png",
+    "/Frame6.png",
+    "/Frame10.png",
+    "/Frame4.png",
+    "/Frame17.png",
+    "/Frame8.png",
+    "/Frame16.png",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section className="hero">
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title">
-              Building good habits, together.
-            </h1>
+            <h1 className="hero-title">Building good habits, together.</h1>
             <p className="hero-description">
-              Show proof, not promises. WinToday uses dual-camera check-ins to create 
-              real accountability between you and your friends. No more fake progress updates.
+              Show proof, not promises. WinToday uses dual-camera check-ins to
+              create real accountability between you and your friends. No more
+              fake progress updates.
             </p>
             <div className="hero-cta">
               <a
@@ -30,43 +58,17 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-visual">
-            <div className="phone-cluster">
-              <div className="phone-mockup primary">
-                <div className="phone-screen">
-                  <div className="app-content">
-                    <div className="header-bar">
-                      <span className="app-title">WinToday</span>
-                    </div>
-                    <div className="goal-card">
-                      <div className="goal-icon">💪</div>
-                      <div className="goal-title">Daily Workout</div>
-                      <div className="streak">🔥 7 day streak</div>
-                      <div className="check-in-btn">Check In Now</div>
-                    </div>
-                    <div className="friend-activity">
-                      <div className="activity-item">
-                        <div className="avatar">👤</div>
-                        <span>Sarah completed her run!</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="phone-mockup secondary">
-                <div className="phone-screen">
-                  <div className="app-content">
-                    <div className="leaderboard">
-                      <h3>Weekly Leaderboard</h3>
-                      <div className="leader-item">
-                        <span>1. You - 6 wins</span>
-                      </div>
-                      <div className="leader-item">
-                        <span>2. Alex - 5 wins</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="screenshot-container">
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`WinToday App Screenshot ${index + 1}`}
+                  className={`app-screenshot ${
+                    index === currentImageIndex ? "active" : ""
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
