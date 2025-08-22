@@ -100,4 +100,8 @@
   .app-screenshot {
     max-width: 250px;
   }
+  
+  .hero-cta {
+    justify-content: center;
+  }
 }

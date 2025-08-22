@@ -4,13 +4,15 @@ import './Features.css'
 const Features = () => {
   const activities = [
     { icon: '💪', label: 'Workout' },
-    { icon: '📚', label: 'Reading' },
     { icon: '🏃', label: 'Running' },
+    { icon: '📚', label: 'Reading' },
+    { icon: '📝', label: 'Journaling' },
     { icon: '🧘', label: 'Meditation' },
-    { icon: '💧', label: 'Water' },
+    { icon: '💧', label: 'Drink Water' },
     { icon: '🥗', label: 'Healthy Eating' },
-    { icon: '😴', label: 'Sleep' },
-    { icon: '📝', label: 'Journaling' }
+    { icon: '😴', label: 'Sleeping' },
+    { icon: '💵', label: 'Investing' },
+    { icon: '💰', label: 'Budgeting' },
   ]
 
   return (
