@@ -15,15 +15,15 @@ const Footer = () => {
             <p className="footer-tagline">Building good habits, together.</p>
           </div>
           <div className="footer-nav">
-            <a href="#features" className="footer-link">
+            {/* <a href="#features" className="footer-link">
               Features
-            </a>
+            </a> */}
             <a href="#testimonials" className="footer-link">
               Testimonials
             </a>
-            <a href="#how-it-works" className="footer-link">
+            {/* <a href="#how-it-works" className="footer-link">
               How it Works
-            </a>
+            </a> */}
             <a
               href="https://apps.apple.com/us/app/wintoday/id6738370856?platform=iphone"
               target="_blank"
