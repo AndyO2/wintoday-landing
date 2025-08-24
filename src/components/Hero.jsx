@@ -31,7 +31,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 1000); // Change image every 1 second
+    }, 500); // Change image every 1 second
 
     return () => clearInterval(interval);
   }, [images.length]);
