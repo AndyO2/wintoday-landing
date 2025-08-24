@@ -30,9 +30,9 @@ const Testimonials = () => {
       <div className="container">
         <div className="testimonials-header">
           <h2 className="testimonials-title">What people are saying</h2>
-          <p className="testimonials-subtitle">
+          {/* <p className="testimonials-subtitle">
             Real reviews from real users building better habits
-          </p>
+          </p> */}
           <div className="social-proof">
             <div className="rating">
               <div className="stars">⭐⭐⭐⭐⭐</div>

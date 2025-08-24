@@ -12,15 +12,15 @@ const Header = () => {
             <span className="logo-text">WinToday.</span>
           </div>
           <nav className="nav">
-            <a href="#features" className="nav-link">
+            {/* <a href="#features" className="nav-link">
               Features
-            </a>
-            <a href="#testimonials" className="nav-link">
+            </a> */}
+            {/* <a href="#testimonials" className="nav-link">
               Testimonials
-            </a>
-            <a href="#how-it-works" className="nav-link">
+            </a> */}
+            {/* <a href="#how-it-works" className="nav-link">
               How it Works
-            </a>
+            </a> */}
           </nav>
           <a
             href="https://apps.apple.com/us/app/wintoday/id6738370856?platform=iphone"

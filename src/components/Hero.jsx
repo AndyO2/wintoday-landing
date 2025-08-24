@@ -21,12 +21,17 @@ const Hero = () => {
     "/Frame17.png",
     "/Frame8.png",
     "/Frame16.png",
+    "/Frame19.png",
+    "/Frame20.png",
+    "/Frame21.png",
+    "/Frame22.png",
+    "/Frame23.png",
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 1000); // Change image every 1 second
 
     return () => clearInterval(interval);
   }, [images.length]);
