@@ -43,8 +43,10 @@ const Hero = () => {
           <div className="hero-text">
             <h1 className="hero-title">Building good habits, together.</h1>
             <p className="hero-description">
-              Show proof, not promises. WinToday uses dual-camera check-ins to
-              create real accountability between you and your friends.
+              Show <b style={{ color: "#000" }}>proof</b>, not{" "}
+              <b style={{ color: "#000" }}>promises</b>. WinToday uses
+              dual-camera check-ins to create real accountability between you
+              and your friends.
             </p>
             <div className="hero-cta">
               <a
