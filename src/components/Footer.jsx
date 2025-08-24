@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../WinToday-logo.png";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ onShowPrivacy }) => {
   return (
     <footer className="footer">
       <div className="container">
@@ -21,6 +21,7 @@ const Footer = () => {
             <a href="#testimonials" className="footer-link">
               Testimonials
             </a>
+            
             {/* <a href="#how-it-works" className="footer-link">
               How it Works
             </a> */}
@@ -38,6 +39,11 @@ const Footer = () => {
           <p className="footer-copyright">
             © {new Date().getFullYear()} WinToday.
           </p>
+          <div className="footer-legal">
+            <button onClick={onShowPrivacy} className="footer-legal-link">
+              Privacy Policy
+            </button>
+          </div>
         </div>
       </div>
     </footer>
