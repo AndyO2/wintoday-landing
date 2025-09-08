@@ -49,7 +49,7 @@
 }
 
 .footer-link:hover {
-  color: #007AFF;
+  color: #007aff;
 }
 
 .footer-bottom {
@@ -75,10 +75,11 @@
   cursor: pointer;
   text-decoration: underline;
   transition: color 0.2s ease;
+  margin-right: 10px;
 }
 
 .footer-legal-link:hover {
-  color: #007AFF;
+  color: #007aff;
 }
 
 @media (max-width: 768px) {
@@ -87,7 +88,7 @@
     text-align: center;
     gap: 30px;
   }
-  
+
   .footer-nav {
     flex-direction: column;
     gap: 15px;

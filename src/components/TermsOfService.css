@@ -1,0 +1,105 @@
+.terms-of-service {
+  min-height: 100vh;
+  padding: 80px 0 60px;
+  background: white;
+}
+
+.terms-of-service-header {
+  margin-bottom: 60px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #007AFF;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 24px;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #0056CC;
+}
+
+.terms-of-service h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.terms-of-service-content {
+  background: white;
+  line-height: 1.6;
+}
+
+.terms-of-service-content h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 40px 0 20px 0;
+  line-height: 1.2;
+}
+
+.terms-of-service-content h3 {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 30px 0 16px 0;
+  line-height: 1.2;
+}
+
+.terms-of-service-content p {
+  color: #666;
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+.terms-of-service-content ul {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.terms-of-service-content li {
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.terms-link {
+  color: #007AFF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.terms-link:hover {
+  color: #0056CC;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .terms-of-service {
+    padding: 60px 0 40px;
+  }
+  
+  .terms-of-service h1 {
+    font-size: 2.5rem;
+  }
+  
+  .terms-of-service-header {
+    margin-bottom: 40px;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+}

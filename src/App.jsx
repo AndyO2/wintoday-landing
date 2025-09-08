@@ -1,27 +1,17 @@
-import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Features from "./components/Features";
 import Testimonials from "./components/Testimonials";
-import HowItWorks from "./components/HowItWorks";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsOfService from "./components/TermsOfService";
 import "./App.css";
 
-function App() {
-  const [currentPage, setCurrentPage] = useState("home");
-
-  const showPrivacyPolicy = () => setCurrentPage("privacy");
-  const showHome = () => setCurrentPage("home");
-
-  if (currentPage === "privacy") {
-    return (
-      <div className="App">
-        <PrivacyPolicy onBack={showHome} />
-      </div>
-    );
-  }
+function HomePage() {
+  const navigate = useNavigate();
+  const showPrivacyPolicy = () => navigate("/privacy-policy");
+  const showTermsOfService = () => navigate("/terms-of-service");
 
   return (
     <div className="App">
@@ -31,8 +21,42 @@ function App() {
       <Testimonials />
       {/* <HowItWorks /> */}
       <FAQ />
-      <Footer onShowPrivacy={showPrivacyPolicy} />
+      <Footer onShowPrivacy={showPrivacyPolicy} onShowTerms={showTermsOfService} />
     </div>
+  );
+}
+
+function PrivacyPolicyPage() {
+  const navigate = useNavigate();
+  const showHome = () => navigate("/");
+
+  return (
+    <div className="App">
+      <PrivacyPolicy onBack={showHome} />
+    </div>
+  );
+}
+
+function TermsOfServicePage() {
+  const navigate = useNavigate();
+  const showHome = () => navigate("/");
+
+  return (
+    <div className="App">
+      <TermsOfService onBack={showHome} />
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+      </Routes>
+    </Router>
   );
 }
 
